@@ -1,8 +1,5 @@
 <html>
   <head>
-    <meta property="og:site_name" content="MySite">
-    <meta property="og:title" content="My title">
-    <meta property="og:description" content="Some description about page">
   </head>
   <body onload="myFunction()">
     <h1>
@@ -10,15 +7,19 @@
     </h1>
     <script>
       function myFunction(){
-        const node = document.createElement("meta");
-        node.setAttribute("property", "og:site_name");
-        node.setAttribute("content", "MySite");
-        node.setAttribute("property", "og:title");
-        node.setAttribute("content", "My title");
-        node.setAttribute("property", "og:description");
-        node.setAttribute("content", "Some description about page");
         setTimeout(function(){
-          document.getElementsByTagName('head')[0].appendChild( ... );
+          const node1 = document.createElement("meta");
+          node1.setAttribute("property", "og:site_name");
+          node1.setAttribute("content", "MySite");
+          const node2 = document.createElement("meta");
+          node2.setAttribute("property", "og:title");
+          node2.setAttribute("content", "My title");
+          const node3 = document.createElement("meta");
+          node3.setAttribute("property", "og:description");
+          node3.setAttribute("content", "Some description about page");
+          document.getElementsByTagName('head')[0].appendChild(node1);
+          document.getElementsByTagName('head')[0].appendChild(node2);
+          document.getElementsByTagName('head')[0].appendChild(node3);
         }, 30000);
       }
     </script>
