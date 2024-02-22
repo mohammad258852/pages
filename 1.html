@@ -4,9 +4,23 @@
     <meta property="og:title" content="My title">
     <meta property="og:description" content="Some description about page">
   </head>
-  <body>
+  <body onload="myFunction()">
     <h1>
       Title
     </h1>
+    <script>
+      function myFunction(){
+        const node = document.createElement("meta");
+        node.setAttribute("property", "og:site_name");
+        node.setAttribute("content", "MySite");
+        node.setAttribute("property", "og:title");
+        node.setAttribute("content", "My title");
+        node.setAttribute("property", "og:description");
+        node.setAttribute("content", "Some description about page");
+        setTimeout(function(){
+          document.getElementsByTagName('head')[0].appendChild( ... );
+        }, 30000);
+      }
+    </script>
   </body>
 </html>
